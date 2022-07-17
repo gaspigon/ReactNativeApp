@@ -1,13 +1,14 @@
 import React from "react";
 import { View, Text, StyleSheet, Button } from "react-native";
+import Colors from "../components/constants/Colors";
 
 const StartMenu = () => {
     return (
         <View style={styles.screen}>
             <Text style={styles.title}>Conecta, juga y disfruta del mejor padel</Text>
             <View style={styles.buttonContainer}>
-                <Button style={styles.btn}  title="Iniciar Sesion"/>
-                <Button style={styles.btn}  title="Registrarme" />
+                <Button  onPress={() => {}} color={Colors.primary} title="Iniciar Sesion"/>
+                <Button  onPress={() => {}} color={Colors.secondary} title="Registrarme" />
             </View>
         </View>
     )
@@ -29,6 +30,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginTop: 50,
         marginBottom: 50,
+        maxWidth: '80%',
 
     },
     buttonContainer:{
