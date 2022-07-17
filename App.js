@@ -6,6 +6,9 @@ import React from 'react';
 import CustomModal from './components/Modal';
 import AddItem from './components/AddItem';
 import List from './components/List';
+import { Video } from 'expo-av';
+import StartMenu from './pages/StartMenu';
+
 
 
 export default function App() {
@@ -16,7 +19,9 @@ export default function App() {
   const [itemSelected, setItemSelected] = useState({})
   const [modalVisible, setModalVisible] = useState(false)
 
+  const video = React.useRef(null)
 
+/*
   const onHandlerChangeItem = (text) => {
     setTextItem(text)
   }
@@ -43,10 +48,24 @@ export default function App() {
     setItemList([...itemList])
     setModalVisible(!modalVisible)
   }
+  */
 
   return (
     <View style={styles.screen} >
-      <CustomModal 
+
+      <Video 
+      ref={video}
+      style={styles.video}
+      source={require('./PLAYPADEL.mp4')}
+      shouldPlay={true}
+      isMuted={true}
+      isLooping={true}
+      resizeMode= "cover" 
+      >
+
+        
+    {/*}
+         <CustomModal 
       modalVisible={modalVisible}
       itemSelected={itemSelected}
       onHandlerCompleteItem={onHandlerCompleteItem}
@@ -55,9 +74,9 @@ export default function App() {
    
       />
 
+  */}
 
-
-      
+      {/*
       <AddItem 
               textItem={textItem}
               onHandlerAddItem={onHandlerAddItem}
@@ -68,6 +87,12 @@ export default function App() {
               itemList={itemList}
               onHandlerModal={onHandlerModal} />
        
+*/}
+      <StartMenu />
+
+      </Video>
+  
+     
     </View>
   );
 }
@@ -75,9 +100,16 @@ export default function App() {
 const styles = StyleSheet.create({
 
   screen: {
-    padding: 30,
-    flex: 1
+    flex: 1,
   },
+  video: {
+    position: 'absolute',
+    top: 0,
+    left:0,
+    bottom:0,
+    right:0,
+
+  }
 
   
 

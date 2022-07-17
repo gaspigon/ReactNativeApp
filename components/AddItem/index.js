@@ -19,15 +19,20 @@ export default function AddItem(props) {
 
 const styles = StyleSheet.create({
     container: {
-        marginTop: 50,
+        marginTop: 80,
         alignItems: 'center',
         justifyContent: 'space-between',
-        flexDirection: 'row'  
+        flexDirection: 'row',
+        justifyContent: 'center' 
+
     },
     input: {
-        width: '80%',
+        display:'flex',
+        alignItems: 'center',
+        marginLeft: 50,
+        width: '50%',
         height: 50,
-        borderColor: 'black',
+        borderColor: 'white',
         borderBottomWidth: 1
 
     },
