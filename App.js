@@ -3,94 +3,35 @@ import { Button, StyleSheet, TextInput, View,Text, FlatList, TouchableOpacity, M
 import { useState } from 'react';
 
 import React from 'react';
-import CustomModal from './components/Modal';
-import AddItem from './components/AddItem';
-import List from './components/List';
-import { Video } from 'expo-av';
-import StartMenu from './pages/StartMenu';
+import FirstMenu from './pages/FirstMenu';
+import FirstScreen from './pages/FirstScreen';
 
 
 
-export default function App() {
 
-  const [textItem, setTextItem] = useState('')
-  const [itemList, setItemList] = useState([])
 
-  const [itemSelected, setItemSelected] = useState({})
-  const [modalVisible, setModalVisible] = useState(false)
+export default function App(props) {
 
-  const video = React.useRef(null)
+  const [press, setPress] = useState()
 
-/*
-  const onHandlerChangeItem = (text) => {
-    setTextItem(text)
+  const handlerPress = (press) => {
+    setPress(press)
   }
 
-  const onHandlerAddItem = () => {
-    setItemList(currentItems => [...currentItems, {id: Date.now() , value: textItem }])
-    setTextItem('')
+
+
+  if(press){
+    content = <FirstMenu />
   }
 
-  const onHandlerDeleteItem = id => {
-    setItemList(currentItems => currentItems.filter(item => item.id !==id))
-    setItemSelected({})
-    setModalVisible(!modalVisible)
-  }
-
-  const onHandlerModal = id => {
-    setItemSelected(itemList.find(item => item.id ===id))
-    setModalVisible(!modalVisible)
-  } 
-
-  const onHandlerCompleteItem = id => {
-    let itemCompleted = itemList.findIndex((item) => item.id === id)
-    itemList[itemCompleted].completed = true
-    setItemList([...itemList])
-    setModalVisible(!modalVisible)
-  }
-  */
 
   return (
     <View style={styles.screen} >
 
-      <Video 
-      ref={video}
-      style={styles.video}
-      source={require('./PLAYPADEL.mp4')}
-      shouldPlay={true}
-      isMuted={true}
-      isLooping={true}
-      resizeMode= "cover" 
-      >
-
-        
-    {/*}
-         <CustomModal 
-      modalVisible={modalVisible}
-      itemSelected={itemSelected}
-      onHandlerCompleteItem={onHandlerCompleteItem}
-      onHandlerDeleteItem = {onHandlerDeleteItem}
-  
-   
-      />
-
-  */}
-
-      {/*
-      <AddItem 
-              textItem={textItem}
-              onHandlerAddItem={onHandlerAddItem}
-              onHandlerChangeItem={onHandlerChangeItem}
-              />
-
-      <List 
-              itemList={itemList}
-              onHandlerModal={onHandlerModal} />
-       
-*/}
-      <StartMenu />
-
-      </Video>
+    <View>
+      <FirstScreen />
+     
+    </View>
   
      
     </View>
@@ -101,6 +42,7 @@ const styles = StyleSheet.create({
 
   screen: {
     flex: 1,
+    height: '100%',
   },
   video: {
     position: 'absolute',
@@ -109,6 +51,9 @@ const styles = StyleSheet.create({
     bottom:0,
     right:0,
 
+  },
+  menu: {
+    zIndex: 1,
   }
 
   
