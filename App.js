@@ -1,6 +1,8 @@
 
 import { Button, StyleSheet, TextInput, View,Text, FlatList, TouchableOpacity, Modal } from 'react-native';
 import { useState } from 'react';
+import {useFonts} from 'expo-font'
+import AppLoading from 'expo-app-loading'
 
 import React from 'react';
 import FirstMenu from './pages/FirstMenu';
@@ -11,7 +13,8 @@ import FirstScreen from './pages/FirstScreen';
 
 
 export default function App() {
-
+  const [loaded] = useFonts({ RobotoBlack: require('./assets/fonts/Roboto-Black.ttf'), RobotoBlackItalic: require('./assets/fonts/Roboto-BlackItalic.ttf'), RobotoBold: require('./assets/fonts/Roboto-Bold.ttf'), RobotoItalic: require('./assets/fonts/Roboto-Italic.ttf'), RobotoRegular: require('./assets/fonts/Roboto-Regular.ttf'), RobotoThin: require('./assets/fonts/Roboto-Thin.ttf')})
+  
   const [userOption, setUserOption ] = useState(false)
 
   const handlerPress = () => {
@@ -29,7 +32,8 @@ let content = <FirstScreen onScreen={handlerPress} />
     content = <FirstMenu switchScreen={handlerBack} />
   }
 
-
+    if(!loaded) return <AppLoading />
+    
   return (
     <View style={styles.screen} >
 

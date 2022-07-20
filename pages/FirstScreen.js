@@ -79,6 +79,7 @@ const styles = StyleSheet.create({
         marginTop: 50,
         marginBottom: 50,
         maxWidth: '80%',
+        fontFamily: 'RobotoBold'
 
     },
 })
