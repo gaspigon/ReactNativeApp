@@ -2,13 +2,17 @@ import React from "react";
 import { View, Text, StyleSheet, Button } from "react-native";
 import { Video } from 'expo-av';
 import Colors from "../constants/Colors";
+import { useState } from "react";
 
 
 
 
-const FirstScreen = () => {
+
+const FirstScreen = props => {
 
 const video = React.useRef(null)
+
+
     
 return (
         <View style={styles.screen}>
@@ -31,7 +35,7 @@ return (
                              <Button  onPress={() => props.onScreen()} color={Colors.primary} title="Iniciar Sesion"/>
                         </View>
                         <View> 
-                             <Button  onPress={() => {}} color={Colors.secondary} title="Registrarme" />
+                             <Button   color={Colors.secondary} title="Registrarme" />
                         </View>
                        
                 

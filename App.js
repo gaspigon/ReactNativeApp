@@ -10,18 +10,23 @@ import FirstScreen from './pages/FirstScreen';
 
 
 
-export default function App(props) {
+export default function App() {
 
-  const [press, setPress] = useState()
+  const [userOption, setUserOption ] = useState(false)
 
-  const handlerPress = (press) => {
-    setPress(press)
-  }
+  const handlerPress = () => {
+    setUserOption(true)
+    }
 
+    const handlerBack = () => {
+      setUserOption(false)
+      }
+    
 
+let content = <FirstScreen onScreen={handlerPress} />
 
-  if(press){
-    content = <FirstMenu />
+  if(userOption){
+    content = <FirstMenu switchScreen={handlerBack} />
   }
 
 
@@ -29,7 +34,8 @@ export default function App(props) {
     <View style={styles.screen} >
 
     <View>
-      <FirstScreen />
+      {/*<FirstScreen />*/}
+      {content}
      
     </View>
   
