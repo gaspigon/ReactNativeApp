@@ -1,10 +1,11 @@
 
-import { Button, StyleSheet, TextInput, View,Text, FlatList, TouchableOpacity, Modal } from 'react-native';
+import {  StyleSheet, View, TouchableOpacity } from 'react-native';
 import { useState } from 'react';
 
 import React from 'react';
 import FirstMenu from './pages/FirstMenu';
 import FirstScreen from './pages/FirstScreen';
+import PlayPadelNavigator from './navigation/PlayPadelNavigator';
 
 
 
@@ -31,16 +32,7 @@ let content = <FirstScreen onScreen={handlerPress} />
 
 
   return (
-    <View style={styles.screen} >
-
-    <View>
-      {/*<FirstScreen />*/}
-      {content}
-     
-    </View>
-  
-     
-    </View>
+    <PlayPadelNavigator />
   );
 }
 

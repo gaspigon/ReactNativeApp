@@ -8,7 +8,11 @@ import { useState } from "react";
 
 
 
-const FirstScreen = props => {
+
+
+
+
+const FirstScreen = ({navigation}) => {
 
 const video = React.useRef(null)
 
@@ -32,7 +36,9 @@ return (
                     <Text style={styles.title}>Conecta, juga y disfruta del mejor padel</Text>
                     <View style={styles.buttonContainer}>
                         <View>
-                             <Button  onPress={() => props.onScreen()} color={Colors.primary} title="Iniciar Sesion"/>
+                             <Button  onPress={() => {navigation.navigate('Iniciar Sesion')}} screenOptions={
+                                {headerShown: false}
+                             } color={Colors.primary} title="Iniciar Sesion"/>
                         </View>
                         <View> 
                              <Button   color={Colors.secondary} title="Registrarme" />
