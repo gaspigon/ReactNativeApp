@@ -33,6 +33,7 @@ let content = <FirstScreen onScreen={handlerPress} />
 
   return (
     <PlayPadelNavigator />
+    
   );
 }
 

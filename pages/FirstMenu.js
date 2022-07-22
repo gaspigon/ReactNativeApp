@@ -1,5 +1,6 @@
 import React from "react";
-import { View, Text, StyleSheet, Button , TextInput, ImageBackground} from "react-native";
+import { View, Text, StyleSheet, Button , TextInput, ImageBackground, Image} from "react-native";
+import ButtonCheck from "../components/Button/Button";
 
 import FirstScreen from "./FirstScreen";
 
@@ -8,21 +9,16 @@ const FirstMenu = props => {
 
     return(
         
-            <ImageBackground source={{uri: 'https://im.ge/i/FOfkW0'}} resizeMode="cover" style={styles.image}>
-            <View style={styles.screen}>
-            <View style={styles.boxInput}>
-                <TextInput style={styles.input} placeholder="Usuario/Email" />
-                <TextInput style={styles.input} placeholder="Contraseña" />
-                <Button style={styles.send} title="Iniciar Sesion"/>
-                 
-            </View>
-            <Text style={styles.title}></Text>    
-            <View>
-              
-                <Button title="volver" onPress={() => props.switchScreen()} />
-            </View>
-            </View>
-            </ImageBackground>
+        <ImageBackground source={require('../assets/padel1.jpeg')} style={styles.image}>
+        <View style={styles.container}>
+            <Text style={styles.title}> PLAYPADEL</Text>
+            <TextInput style={styles.input} placeholder="Usuario/Email" />
+            <TextInput style={styles.input} placeholder="Contraseña" />
+            <ButtonCheck />
+             
+        </View>
+               
+            </ImageBackground>        
 
       
     )
@@ -31,21 +27,21 @@ const FirstMenu = props => {
 }
 
 const styles = StyleSheet.create({
-    screen: {
-        justifyContent: 'center',
+    container: {
+        flex: 1,
+        justifyContent: 'flex-start',
         alignItems: 'center',
-        height: '100%',
-        width: '100%',
         padding: 20,
         paddingTop: 100,
-        
-
-
-    },
-    image: {
-        
         width: '100%',
-        height: 900,
+        height: '100%',
+        
+    },
+
+    image: {
+        flex: 1, 
+        width: '100%',
+        height: '100%',
     },
     send:{
         marginTop: 20,
@@ -55,48 +51,27 @@ const styles = StyleSheet.create({
         backgroundColor: '#00bfff',
     },
 
-    boxInput: {
-        backgroundColor: '#fff',
-        width: '80%',
-        height: '30%',
+    input: {
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: 10,
-        marginBottom: 20,
-        marginTop: 20,
+        height: 50, 
         padding: 10,
-        shadowColor: 'black',
-        shadowOpacity: 0.26,
-        shadowOffset: { width: 0, height: 2 },
-        shadowRadius: 8,
-        elevation: 5,
-
-    },
-    input: {
-        borderBottomWidth: 1,
-        borderColor: '#000',
-        margin: 10,
-        width: '80%',
-        borderRadius: 10,
-        backgroundColor: '#fff',
-        fontSize: 15,
-        color: '#000',
-        textAlign: 'center',
-        marginBottom: 20,
         marginTop: 20,
-        borderColor: '#000',
+        width: '80%',
+        borderRadius: 20,
+        backgroundColor: '#f1f1f1',
+        color: '#34434D',
+        fontSize: 15,
+        paddingStart: 30,
 
     },
     title: {
-        fontSize: 30,
+       
+        fontSize: 50,
         fontWeight: 'bold',
-        marginBottom: 20,
-        textAlign: 'center',
-        marginTop: 50,
-        marginBottom: 50,
-        maxWidth: '80%',
-        color: 'black',
-
+        color: '#34434D',
+        marginTop: 20,
+        marginBottom: 80,
     }
  })
 
