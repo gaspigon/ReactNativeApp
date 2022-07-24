@@ -12,7 +12,7 @@ const ButtonCheck = () => {
 
 const styles = StyleSheet.create({
     button: {
-        backgroundColor: '#00bfff',
+        backgroundColor: '#369B43',
         height: 50,
         width: '60%',
         justifyContent: 'center',
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
         fontSize: 20,
         color: '#fff',
         fontWeight: 'bold',
-        
+
         
 
         
