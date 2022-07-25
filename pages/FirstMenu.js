@@ -1,8 +1,8 @@
 import React from "react";
-import { View, Text, StyleSheet, Button , TextInput, ImageBackground, Image} from "react-native";
+import { View, Text, StyleSheet, TextInput, ImageBackground, Image} from "react-native";
 import ButtonCheck from "../components/Button/Button";
 
-import FirstScreen from "./FirstScreen";
+
 
 const FirstMenu = props => {
   
