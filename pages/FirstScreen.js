@@ -1,8 +1,7 @@
 import React from "react";
-import { View, Text, StyleSheet, Button, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet,  TouchableOpacity } from "react-native";
 import { Video } from 'expo-av';
-import Colors from "../constants/Colors";
-import { useState } from "react";
+
 
 
 
@@ -44,7 +43,7 @@ return (
                              </TouchableOpacity>
                      
                      
-                            <TouchableOpacity  onPress={() => {navigation.navigate('Registro')}} style={styles.touch1}>
+                            <TouchableOpacity   style={styles.touch1}>
                                 <Text style={styles.button}>Registrarme</Text>
                             </TouchableOpacity>
                              

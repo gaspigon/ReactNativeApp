@@ -1,11 +1,14 @@
 import React from "react";
-import { View, Text, StyleSheet, TextInput, ImageBackground, Image} from "react-native";
+import { View, Text, StyleSheet, TextInput, ImageBackground,Button,TouchableOpacity } from "react-native";
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
 import ButtonCheck from "../components/Button/Button";
 
 
 
-const FirstMenu = props => {
-  
+
+const FirstMenu = ({navigation})=> {
+    const Tab = createBottomTabNavigator();
 
     return(
         
@@ -14,9 +17,17 @@ const FirstMenu = props => {
             <Text style={styles.title}> PLAYPADEL</Text>
             <TextInput style={styles.input} placeholder="Usuario/Email" />
             <TextInput style={styles.input} placeholder="Contraseña" />
-            <ButtonCheck />
+          
+                <ButtonCheck onPress={() => {navigation.push('Menu')}} />
+         
+            <TouchableOpacity onPress={() => {navigation.push('Menu')}}>
+                <Text>Hola</Text>
+            </TouchableOpacity>
+           
              
         </View>
+
+          
                
             </ImageBackground>        
 

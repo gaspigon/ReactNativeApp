@@ -5,7 +5,7 @@ import { View, Text, StyleSheet, TouchableOpacity, ImageBackground , TextInput} 
 const MenuApp = () => {
     return (
         <View>
-            
+            <Text>BIENVENIDO</Text>
         </View>
     )
 }

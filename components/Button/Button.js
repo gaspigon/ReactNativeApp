@@ -4,7 +4,7 @@ import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
 const ButtonCheck = () => {
     return(
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} >
                    <Text style={styles.btn}>Iniciar Sesion</Text>
         </TouchableOpacity>
     )
