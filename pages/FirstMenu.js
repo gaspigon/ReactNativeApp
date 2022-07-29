@@ -7,7 +7,7 @@ import ButtonCheck from "../components/Button/Button";
 
 
 
-const FirstMenu = ({navigation})=> {
+const FirstMenu = ({navigation })=> {
     const Tab = createBottomTabNavigator();
 
     return(
@@ -18,11 +18,9 @@ const FirstMenu = ({navigation})=> {
             <TextInput style={styles.input} placeholder="Usuario/Email" />
             <TextInput style={styles.input} placeholder="Contraseña" />
           
-                <ButtonCheck onPress={() => {navigation.push('Menu')}} />
+                <ButtonCheck  onPress={() => {navigation.push('Menu')}} title='Iniciar Sesion'/>
          
-            <TouchableOpacity onPress={() => {navigation.push('Menu')}}>
-                <Text>Hola</Text>
-            </TouchableOpacity>
+
            
              
         </View>

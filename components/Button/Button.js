@@ -2,10 +2,11 @@ import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
 
-const ButtonCheck = () => {
+const ButtonCheck = (props) => {
+
     return(
-        <TouchableOpacity style={styles.button} >
-                   <Text style={styles.btn}>Iniciar Sesion</Text>
+        <TouchableOpacity onPress={props.onPress} style={styles.button} >
+                   <Text style={styles.btn}>{props.title}</Text>
         </TouchableOpacity>
     )
 }
