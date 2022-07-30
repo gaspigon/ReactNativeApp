@@ -6,9 +6,11 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import FirstScreen from "../pages/FirstScreen";
 import FirstMenu from "../pages/FirstMenu";
-import MenuRegister from "../pages/MenuRegister";
-import MenuApp from "../pages/MenuApp";
+
+import MenuApp from "../screens/MenuApp";
 import { COLORS } from "../constants/Colors";
+import CategoryMenuScreen from "../screens/CategoryMenuScreen";
+import MenusDetailScreen from "../screens/MenusDetailScreen";
 
 const Stack = createNativeStackNavigator()
 
@@ -26,8 +28,10 @@ const PlayPadelNavigator = () => {
        >
         <Stack.Screen name="Home" component={FirstScreen} options={{headerShown: false}}/>
         <Stack.Screen name="Iniciar Sesion" component={FirstMenu}  />
-        <Stack.Screen name="Registro" component={MenuRegister} />
-        <Stack.Screen name="Menu" component={MenuApp} />
+        <Stack.Screen name="Products" component={MenuApp} />
+       <Stack.Screen name="Detail" component={CategoryMenuScreen}  options= {({route}) => ({ title: route.params.name})}/>
+       <Stack.Screen name="Register" component={MenusDetailScreen} />
+     
       </Stack.Navigator>
 
     </NavigationContainer>

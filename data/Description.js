@@ -7,7 +7,7 @@ export const DESCRIPTION = [
     },
     {
         id: 2,
-        category: 2,
+        category: 1,
         name: 'Canchas',
         description: 'Canchas de padel',
     },

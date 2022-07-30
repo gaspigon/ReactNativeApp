@@ -30,7 +30,7 @@ return (
                 isLooping={true}
                 resizeMode= "cover" 
             
-                >
+                />
                 <View style={styles.menu}>
             
                     <Text style={styles.title}>Conecta, juga y disfruta del mejor padel</Text>
@@ -55,7 +55,7 @@ return (
                 </View>
                     
                
-            </Video>
+          
         </View>
     )
 }

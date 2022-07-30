@@ -2,7 +2,7 @@ export const CATEGORIES = [
     {
         id: 1,
         title: 'Reservas',
-        color: '#f9a825',
+        color: 'blue',
     },
     {
         id: 2,

@@ -18,7 +18,7 @@ const FirstMenu = ({navigation })=> {
             <TextInput style={styles.input} placeholder="Usuario/Email" />
             <TextInput style={styles.input} placeholder="Contraseña" />
           
-                <ButtonCheck  onPress={() => {navigation.push('Menu')}} title='Iniciar Sesion'/>
+                <ButtonCheck  onPress={() => {navigation.push('Products')}} title='Iniciar Sesion'/>
          
 
            
