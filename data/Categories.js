@@ -2,21 +2,21 @@ export const CATEGORIES = [
     {
         id: 1,
         title: 'Reservas',
-        color: 'blue',
+        color: '#B0B1BA',
     },
     {
         id: 2,
-        title: 'Canchas',
-        color: '#f9a825',
+        title: 'Torneos',
+        color: '#B0B1BA',
     },
     {
         id: 3,
-        title: 'Usuarios',
-        color: '#f9a825',
+        title: 'Clubes',
+        color: '#B0B1BA',
     },
     {
         id: 4,
-        title: 'Configuracion',
-        color: '#f9a825',
+        title: 'Buscar Jugadores',
+        color: '#B0B1BA',
     }
 ]

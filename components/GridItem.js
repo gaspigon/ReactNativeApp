@@ -3,7 +3,9 @@ import { View, Text, StyleSheet,  TouchableOpacity } from "react-native";
 
 const GridItem = ({item, onSelected}) => {
     return (
+        
         <View style={styles.gridItem} >
+
             <TouchableOpacity onPress={() => onSelected(item)}
                 style={{...styles.container, backgroundColor: item.color}} >
                 <View>
@@ -12,6 +14,7 @@ const GridItem = ({item, onSelected}) => {
               
             </TouchableOpacity>
         </View>
+       
     )
 
 }
@@ -22,6 +25,7 @@ const styles = StyleSheet.create({
         margin: 15,
         height: 150,
         borderRadius: 10,
+    
     },
     container: {
         flex: 1,
@@ -32,16 +36,14 @@ const styles = StyleSheet.create({
         shadowRadius: 10,
         elevation: 3,
         padding: 15,
-        justifyContent: 'flex-end',
-        alignItems: 'flex-end',
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+    
     },
     title: {
-        fontSize: 20,
+        fontSize: 22,
         fontWeight: 'bold',
-        color: 'white',
-        textAlign: 'center',
-        marginTop: 10,
-        marginBottom: 10,
+        color: '#47484E',
         maxWidth: '80%',
         fontFamily: 'RobotoBold'
     }
