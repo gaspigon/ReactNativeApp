@@ -9,8 +9,8 @@ const Card = ({item, onSelected}) => {
                     <Text style={styles.title}>{item.name}</Text>
                 </View>
                 <View >
-                    <Text style={styles.details}>{item.name}</Text>
-                    <Text style={styles.details}>{item.name}</Text>  
+                    <Text style={styles.details}>{item.description}</Text>
+                    <Text style={styles.details}>{item.category}</Text>  
                 </View>
             </View>
         </TouchableOpacity>
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     card: {
         padding: 20,
         borderRadius: 10,
-        backgroundColor: 'blue',
+        backgroundColor: '#B7BFB0',
         margin: 10,
     },
     title: {

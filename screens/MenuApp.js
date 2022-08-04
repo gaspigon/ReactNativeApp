@@ -27,6 +27,7 @@ const MenuApp = ({navigation}) => {
             </View>
           
             <FlatList 
+        
             data={CATEGORIES}
             renderItem={renderGridItem}
             numColumns={2}
