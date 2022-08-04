@@ -1,12 +1,9 @@
 
-
-import { useState } from 'react';
 import {useFonts} from 'expo-font'
 import AppLoading from 'expo-app-loading'
 
 import React from 'react';
-import FirstMenu from './pages/FirstMenu';
-import FirstScreen from './pages/FirstScreen';
+
 
 import PlayPadelNavigator from './navigation/PlayPadelNavigator';
 
