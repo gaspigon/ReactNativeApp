@@ -1,10 +1,7 @@
 
 import {useFonts} from 'expo-font'
 import AppLoading from 'expo-app-loading'
-
 import React from 'react';
-
-
 import PlayPadelNavigator from './navigation/PlayPadelNavigator';
 
 

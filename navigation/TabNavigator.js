@@ -57,23 +57,24 @@ const TabNavigator = () => {
 
 const styles = StyleSheet.create({
     tabBar: {
-        shadowColor: '#7f5df0',
-        shadowOffset: { width: 0, height: 10 },
+        shadowColor: '#17255A',
+        shadowOffset: { width: 0, height: 5 },
         shadowOpacity: 0.25,
         shadowRadius: 0.25,
-        elevation: 5,
+        elevation: 3,
         position: 'absolute',
         bottom: 25,
         left: 20,
         right: 20,
         borderRadius: 15,
-        height: 90,
+        height: 80,
 
     },
     item: {
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
+        marginTop: 20
 
     }
 })
