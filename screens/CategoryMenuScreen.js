@@ -1,15 +1,27 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { FlatList } from "react-native";
 import Card from "../components/Card";
-import { DESCRIPTION } from "../data/Description";
+
+import { useSelector, useDispatch } from "react-redux";
+
+//actions
+import { filteredDescription, selectDescription } from "../store/actions/description.action";
 
 
 const CategoryMenuScreen = ({navigation, route}) => {
-    const Menu = DESCRIPTION.filter(item => item.category === route.params.categoryID)
+
+    //redux
+    const dispatch = useDispatch();
+    const description = useSelector(state => state.description.filteredDescription);
+    const category = useSelector(state => state.categories.selected);
+
+    useEffect(() => {
+        dispatch(filteredDescription(category.ID));
+    },[])
 
     const handleSelected = (item) => {
+        dispatch(selectDescription(item.id));
         navigation.navigate('Register', {
-            productID: item.id,
             name: item.name
         });
     }
@@ -21,7 +33,7 @@ const CategoryMenuScreen = ({navigation, route}) => {
 
     return (
         <FlatList 
-            data={Menu} 
+            data={description} 
             renderItem={renderItemMenu}
             keyExtractor={item => item.id}
             

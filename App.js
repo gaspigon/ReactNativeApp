@@ -3,6 +3,8 @@ import {useFonts} from 'expo-font'
 import AppLoading from 'expo-app-loading'
 import React from 'react';
 import PlayPadelNavigator from './navigation/PlayPadelNavigator';
+import {Provider} from 'react-redux'
+import store from './store'
 
 
 
@@ -16,7 +18,11 @@ export default function App() {
     if(!loaded) return <AppLoading />
     
   return (
+    <Provider store={store}>
+
     <PlayPadelNavigator />
+    
+    </Provider>
  
     
   );

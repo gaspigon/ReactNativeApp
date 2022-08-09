@@ -1,6 +1,8 @@
 import React from "react";
 import { FlatList, View, Text, StyleSheet} from "react-native";
 import { CATEGORIES } from "../data/Categories";
+import { useSelector, useDispatch} from "react-redux";
+import { selectCategory } from "../store/actions/category.action";
 import  GridItem  from "../components/GridItem";
 
 
@@ -8,9 +10,12 @@ import  GridItem  from "../components/GridItem";
 
 const MenuApp = ({navigation}) => {
 
+    const categories = useSelector(state => state.categories.categories);
+    const dispatch = useDispatch();
+
     const handleSelectedCategory = (item) => {
+        dispatch(selectCategory(item.id));
         navigation.navigate('Detail', {
-            categoryID: item.id,
             name: item.title
         });
     }

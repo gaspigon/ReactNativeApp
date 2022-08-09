@@ -6,10 +6,10 @@ import {View, Text, StyleSheet, Image, FlatList} from "react-native";
 
 const Profile = () => {
 
-    const [profile, setProfile] = useState([]);
-    const [name, setName] = useState([]);
-    const [login, setLogin] = useState([]);
-    const [location, setLocation] = useState([]);
+    const [profile, setProfile] = useState('');
+    const [name, setName] = useState('');
+    const [login, setLogin] = useState('');
+    const [location, setLocation] = useState('');
 
     useEffect(() => {
         async function fetchData() {
