@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet,  TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet,  TouchableOpacity , ImageBackground} from "react-native";
 import { Video } from 'expo-av';
 
 
@@ -19,21 +19,11 @@ const video = React.useRef(null)
 
     
 return (
+    <ImageBackground source={require('../assets/padel1.jpeg')} style={styles.image}>
         <View style={styles.screen}>
-            <Video 
-        
-                ref={video}
-                style={styles.video}
-                source={require('../PLAYPADEL.mp4')}
-                shouldPlay={true}
-                isMuted={true}
-                isLooping={true}
-                resizeMode= "cover" 
-            
-                />
                 <View style={styles.menu}>
             
-                    <Text style={styles.title}>Conecta, juga y disfruta del mejor padel</Text>
+                    <Text style={styles.title}>Micro 3D</Text>
                     <View style={styles.buttonContainer}>
                      
                              <TouchableOpacity  onPress={() => {navigation.navigate('Iniciar Sesion')}} screenOptions={
@@ -53,10 +43,13 @@ return (
               
                 </View>
                 </View>
+
+        </View>
+    </ImageBackground>
                     
                
           
-        </View>
+       
     )
 }
 

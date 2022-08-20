@@ -4,9 +4,9 @@ import ButtonCheck from "../components/Button/Button";
 
 const MenuRegister = () => {
     return (
-        <ImageBackground source={require('../assets/padel1.jpeg')} style={styles.image}>
+        <ImageBackground style={styles.image}>
         <View style={styles.container}>
-            <Text style={styles.title}> PLAYPADEL</Text>
+  
             <TextInput style={styles.input} placeholder="Usuario/Email" />
             <TextInput style={styles.input} placeholder="Contraseña" />
             <ButtonCheck />

@@ -12,9 +12,9 @@ const FirstMenu = ({navigation })=> {
 
     return(
         
-        <ImageBackground source={require('../assets/padel1.jpeg')} style={styles.image}>
+        <ImageBackground source={require('../assets/impre.jpeg')} style={styles.image}>
         <View style={styles.container}>
-            <Text style={styles.title}> PLAYPADEL</Text>
+            <Text style={styles.title}> Micro 3D</Text>
             <TextInput style={styles.input} placeholder="Usuario/Email" />
             <TextInput style={styles.input} placeholder="Contraseña" />
           
@@ -76,9 +76,9 @@ const styles = StyleSheet.create({
     },
     title: {
        
-        fontSize: 50,
+        fontSize: 60,
         fontWeight: 'bold',
-        color: '#34434D',
+        color: 'white',
         marginTop: 20,
         marginBottom: 80,
     }
